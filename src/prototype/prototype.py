@@ -25,10 +25,12 @@ import board
 import busio
 import adafruit_mcp9808
 from time import sleep
+from datetime import datetime
 from picamera import PiCamera
 from adafruit_seesaw.seesaw import Seesaw
 import adafruit_sgp30
 import smbus
+import logging
 
 # ======================================= Light intensity
 # Get I2C bus
@@ -39,7 +41,7 @@ bus = smbus.SMBus(1)
 #               0x0D(13)        Operation: RGB, Range: 10000 lux, Res: 16 Bits
 bus.write_byte_data(0x44, 0x01, 0x0D)
 
-
+print("Sample2 Protoype Application started")
 # =======================================
 camera = PiCamera()
 camera.resolution = (1024, 768)
@@ -54,31 +56,49 @@ sgp30.iaq_init()
 sgp30.set_iaq_baseline(0x8973, 0x8AAE)
 
 
-while True:
-    print("[GAS SENSOR] eCO2 = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))
-   # print(
-   #         "**** Baseline values: eCO2 = 0x%x, TVOC = 0x%x"
-   #         % (sgp30.baseline_eCO2, sgp30.baseline_TVOC)
-   #     )
-    mcp = adafruit_mcp9808.MCP9808(i2c)
-    print("[TEMP SENSOR]: " + str(mcp.temperature))
-    camera.capture('foo.jpg')
-    touch = ss.moisture_read()
-    temp = ss.get_temp()
-    print("[SOIL PROP SENSOR]: TEMP " + str(temp) + "  MOISTURE: " + str(touch))
-    
+logging.basicConfig(filename='prototype_python_logs.log', level=logging.DEBUG, 
+                    format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger=logging.getLogger(__name__)
+
+
+flog = open("prototype_log.log", "w")
+try:
+    while True:
+        print("[GAS SENSOR] eCO2 = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))
+       # print(
+       #         "**** Baseline values: eCO2 = 0x%x, TVOC = 0x%x"
+       #         % (sgp30.baseline_eCO2, sgp30.baseline_TVOC)
+       #     )
+        mcp = adafruit_mcp9808.MCP9808(i2c)
+        print("[TEMP SENSOR]: " + str(mcp.temperature))
+        camera.capture('foo.jpg')
+        touch = ss.moisture_read()
+        temp = ss.get_temp()
+        print("[SOIL PROP SENSOR]: TEMP " + str(temp) + "  MOISTURE: " + str(touch))
         
-    # ISL29125 address, 0x44(68)
-    # Read data back from 0x09(9), 6 bytes
-    # Green LSB, Green MSB, Red LSB, Red MSB, Blue LSB, Blue MSB
-    data = bus.read_i2c_block_data(0x44, 0x09, 6)
+            
+        # ISL29125 address, 0x44(68)
+        # Read data back from 0x09(9), 6 bytes
+        # Green LSB, Green MSB, Red LSB, Red MSB, Blue LSB, Blue MSB
+        data = bus.read_i2c_block_data(0x44, 0x09, 6)
 
-    # Convert the data
-    green = data[1] * 256 + data[0]
-    red = data[3] * 256 + data[2]
-    blue = data[5] * 256 + data[4]
-
-    # Output data to the screen
-    print(f"[RGB SENSOR] R:{red}, G:{green}, B:{blue} lux ")
-    print("____________________________________-")
-    sleep(2)
+        # Convert the data
+        green = data[1] * 256 + data[0]
+        red = data[3] * 256 + data[2]
+        blue = data[5] * 256 + data[4]
+    
+        # Output data to the screen
+        print(f"[RGB SENSOR] R:{red}, G:{green}, B:{blue} lux ")
+        print("____________________________________")
+        flog.write(f"[{datetime.now()}]" + "\n" +
+            f"[GAS SENSOR] eCO2 = {sgp30.eCO2} ppm \t TVOC = {sgp30.TVOC} ppb \n"+
+                   "[TEMP SENSOR]: " + str(mcp.temperature) + "\n" +
+                   "[SOIL PROP SENSOR]: TEMP " + str(temp) + "  MOISTURE: " + str(touch) + "\n" +
+                   f"[RGB SENSOR] R:{red}, G:{green}, B:{blue} lux "
+                   + "\n ____________________________________ \n")
+        sleep(2)
+except Exception as exception:
+    flog.close()
+    logger.error(exception)
+finally:
+    flog.close()
