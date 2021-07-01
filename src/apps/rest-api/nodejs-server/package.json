@@ -1,0 +1,25 @@
+{
+  "name": "sample2-websocket-server",
+  "version": "1.0.0",
+  "description": "Sample 2 Raspberry Pi Node Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Patryk Sulej, Politechnika Warszawska",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-swagger-generator": "^1.1.17",
+    "helmet": "^4.6.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.9",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
