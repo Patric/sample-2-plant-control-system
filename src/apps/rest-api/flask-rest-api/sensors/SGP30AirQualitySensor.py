@@ -1,7 +1,7 @@
 import adafruit_sgp30
 from . import Sensor
 
-class SGP30AirQualitySensor(Sensor.Sensor):
+class SGP30AirQualitySensor(Sensor.SensorInterface):
     __name = "SGP30 Air Quality Sensor"
 
     def __init__(self):
@@ -13,11 +13,13 @@ class SGP30AirQualitySensor(Sensor.Sensor):
         self.__sgp30.iaq_init()
         self.__sgp30.set_iaq_baseline(0x8973, 0x8AAE)
 
-    def getValues(self):
+    def __getValues(self):
         output = {'gas':
                   {'CO2':{'value': self.__sgp30.eCO2, 'unit':'ppm'},
                    'TVOCppb': {'value': self.__sgp30.TVOC, 'unit':'ppb'}},
                   'name': self.__name}
      
         return output
-    
+        
+    def getValues(self):
+        return super().tryGetValues(self.__getValues)

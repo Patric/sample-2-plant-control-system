@@ -1,7 +1,7 @@
 from adafruit_seesaw.seesaw import Seesaw
 from . import Sensor
 
-class SoilSensor(Sensor.Sensor):
+class SoilSensor(Sensor.SensorInterface):
     __name = "SeaSAW Soil Sensor"
     
     def __init__(self):
@@ -10,8 +10,8 @@ class SoilSensor(Sensor.Sensor):
     def tryInit(self):
         i2c = Sensor.busio.I2C(Sensor.board.SCL, Sensor.board.SDA, frequency=100000)
         self.__ss = Seesaw(i2c, addr=0x36)
-        
-    def getValues(self):
+    
+    def __getValues(self):
         ss_moisture = str(self.__ss.moisture_read())
         ss_temp = str(self.__ss.get_temp())
         output = {'soilSensor': {
@@ -19,3 +19,8 @@ class SoilSensor(Sensor.Sensor):
             'temperature': {'value': ss_temp, 'unit': 'celsius'}},
                   'name': self.__name}
         return output
+    
+    def getValues(self):
+        return super().tryGetValues(self.__getValues)
+
+       
