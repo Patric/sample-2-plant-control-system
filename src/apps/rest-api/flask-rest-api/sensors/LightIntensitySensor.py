@@ -1,10 +1,12 @@
 import smbus
-import Sensor
+from . import Sensor
 
 class LightIntensitySensor(Sensor.Sensor):
     
+    __name = "ISL29125 light intensity sensor"
+    
     def __init__(self):
-        super().__init__(self.tryInit, "ISL29125 light intensity sensor")
+        super().__init__(self.tryInit, self.__name)
 
     def tryInit(self):
         self.__bus = smbus.SMBus(1)
@@ -18,6 +20,10 @@ class LightIntensitySensor(Sensor.Sensor):
         green = data[1] * 256 + data[0]
         red = data[3] * 256 + data[2]
         blue = data[5] * 256 + data[4]
-        output = ({'RGB': {'r': f"{red}", 'g': f"{green}", 'b':f"{blue}"}, 'unit':'lux'})
-        print(output)
+        output = ({'RGB':
+                   {'r': f"{red}",
+                    'g': f"{green}",
+                    'b':f"{blue}"},
+                   'unit':'lux',
+                   'name':self.__name})
         return output
