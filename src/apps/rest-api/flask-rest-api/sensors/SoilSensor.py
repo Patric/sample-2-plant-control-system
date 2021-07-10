@@ -12,8 +12,8 @@ class SoilSensor(Sensor.SensorInterface):
         self.__ss = Seesaw(i2c, addr=0x36)
     
     def __getValues(self):
-        ss_moisture = str(self.__ss.moisture_read())
-        ss_temp = str(self.__ss.get_temp())
+        ss_moisture = self.__ss.moisture_read()
+        ss_temp = self.__ss.get_temp()
         output = {'soilSensor': {
             'moisture': {'value': ss_moisture, 'unit': ''},
             'temperature': {'value': ss_temp, 'unit': 'celsius'}},

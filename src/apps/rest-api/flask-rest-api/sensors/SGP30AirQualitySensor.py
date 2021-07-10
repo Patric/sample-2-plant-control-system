@@ -16,7 +16,7 @@ class SGP30AirQualitySensor(Sensor.SensorInterface):
     def __getValues(self):
         output = {'gas':
                   {'CO2':{'value': self.__sgp30.eCO2, 'unit':'ppm'},
-                   'TVOCppb': {'value': self.__sgp30.TVOC, 'unit':'ppb'}},
+                   'TVOC': {'value': self.__sgp30.TVOC, 'unit':'ppb'}},
                   'name': self.__name}
      
         return output

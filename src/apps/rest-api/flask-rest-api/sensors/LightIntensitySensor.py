@@ -21,10 +21,10 @@ class LightIntensitySensor(Sensor.SensorInterface):
         red = data[3] * 256 + data[2]
         blue = data[5] * 256 + data[4]
         output = ({'RGB':
-                   {'r': f"{red}",
-                    'g': f"{green}",
-                    'b':f"{blue}"},
-                   'unit':'lux',
+                   {'r': red,
+                    'g': green,
+                    'b': blue,
+                    'unit':'lux'},
                    'name':self.__name})
         return output
         

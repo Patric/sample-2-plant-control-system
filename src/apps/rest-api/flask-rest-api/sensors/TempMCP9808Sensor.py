@@ -13,7 +13,7 @@ class TempMCP9808Sensor(Sensor.SensorInterface):
         
     def __getValues(self):
         mcp_temp = adafruit_mcp9808.MCP9808(self.__i2c).temperature
-        output = {'mcp_temperature': {
+        output = {'mcpTemperature': {
                     'value': mcp_temp,
                     'unit': 'celsius'},
                   'name': self.__name}
