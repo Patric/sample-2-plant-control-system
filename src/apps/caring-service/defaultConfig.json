@@ -1,0 +1,13 @@
+{
+   "pid":{
+      "kp":15,
+      "ki":0.25,
+      "kd":0.02,
+      "SP":24.7,
+      "output_limit_min":0,
+      "output_limit_max":100
+   },"gpio":{
+      "gpio_bcm_out":10,
+      "gpio_pwm_frequency":100
+   }
+}
