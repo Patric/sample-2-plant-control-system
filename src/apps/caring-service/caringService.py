@@ -43,19 +43,20 @@ def checkIfFolderExists(folderName):
     if not CHECK_FOLDER:
         os.makedirs(folderName)
 
-LOGSDIR = 'logs'
+LOGSDIR = '/home/pi/sample2/src/apps/www-data/logs'
+CONFIG_DIR = '/home/pi/sample2/src/apps/www-data/config/caring-service'
 checkIfFolderExists(LOGSDIR)
 logging.basicConfig(filename=f"{LOGSDIR}/caring_system.log", level=logging.DEBUG, 
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
 logger=logging.getLogger(__name__)
 
 
-with open('config.json') as f:
+with open(f"{CONFIG_DIR}/config.json") as f:
     try:
         config = json.load(f)
     except Exception as exc:
         logger.error(" | loading default config |" + str(exc))
-        with open('defaultConfig.json') as fdefault:
+        with open(f"{CONFIG_DIR}/defaultConfig.json") as fdefault:
             config = json.load(fdefault)
     
 automatic_control = PID()
@@ -74,11 +75,11 @@ def on_config_modified(event):
         print(exc)
         logger.error(str(exc))
 
-config_dir_path = '.'
+
 event_handler = PatternMatchingEventHandler(["config.json"], ["*.log"])
 event_handler.on_modified = on_config_modified
 observer = Observer()
-observer.schedule(event_handler, config_dir_path)
+observer.schedule(event_handler, CONFIG_DIR)
 observer.start()
 
 
@@ -104,7 +105,8 @@ try:
         except Exception as exc:
             logger.error(exc)
         try:   
-            automatic_control.calculateAndExecute(mean(temps))
+            pv, cv, sp = automatic_control.calculateAndExecute(mean(temps))
+            logger.info(f"[PV]: {pv} [CV]: {cv}, [SP]: {sp}")
         except Exception as exc:
             print(str(exc))
             logger.error(exc)
