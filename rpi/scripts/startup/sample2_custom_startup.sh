@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ~/sample2/rpi/scripts
+# scripts to be run after system start
 chmod +x start-experiment.sh
 sh start-experiment.sh
 

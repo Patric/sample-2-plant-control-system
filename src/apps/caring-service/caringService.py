@@ -1,24 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  untitled.py
+#  caringService.py
 #  
-#  Copyright 2021  <pi@raspberrypi>
+#  Copyright 2021  <sample.ska.igluna@gmail.com>
 #  
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
-#  (at your option) any later version.
-#  
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#  
-#  You should have received a copy of the GNU General Public License
-#  along with this program; if not, write to the Free Software
-#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-#  MA 02110-1301, USA.
 #  
 #  
 from time import sleep
@@ -31,6 +17,7 @@ import logging
 import json
 from statistics import mean
 from PID import PID
+from Camera import Camera
 
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
@@ -45,6 +32,9 @@ def checkIfFolderExists(folderName):
 
 LOGSDIR = '/home/pi/sample2/src/apps/www-data/logs'
 CONFIG_DIR = '/home/pi/sample2/src/apps/www-data/config/caring-service'
+PHOTO_DIR = '/home/pi/sample2/src/apps/www-data/images/photo'
+
+
 checkIfFolderExists(LOGSDIR)
 logging.basicConfig(filename=f"{LOGSDIR}/caring_system.log", level=logging.DEBUG, 
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
@@ -82,8 +72,11 @@ observer = Observer()
 observer.schedule(event_handler, CONFIG_DIR)
 observer.start()
 
-
-
+try:
+    camera = Camera()
+    logger.info("Initiated camera.")
+except Exception as exc:
+    logger.error(exc)
 
 print("Sample2 Caring Service started")
 try:
@@ -106,7 +99,13 @@ try:
             logger.error(exc)
         try:   
             pv, cv, sp = automatic_control.calculateAndExecute(mean(temps))
-            logger.info(f"[PV]: {pv} [CV]: {cv}, [SP]: {sp}")
+            logger.info(f"[PV]: {pv} [CV]: {cv}, [SP]: {sp} \n {temps}")
+        except Exception as exc:
+            logger.error(exc)
+            
+        try:
+            camera.savePhoto(PHOTO_DIR)
+            logger.info(f"Successfully saved photo to {PHOTO_DIR}")
         except Exception as exc:
             print(str(exc))
             logger.error(exc)
@@ -120,3 +119,4 @@ finally:
     automatic_control.stopPID()
     observer.stop()
     observer.join()
+    camera.stopCapture()

@@ -1,0 +1,1 @@
+# This directory IS NOT AUTOMATICALLY FETCHED by NGINX

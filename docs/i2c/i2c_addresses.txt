@@ -4,3 +4,4 @@ i2cdetect -y 1
 0x36 - Seasaw Soil Sensor 
 0x44 - ISL light intensity sensor
 0x58 - SGP Gas sensor
+0x77 - BME280 humidity, pressure sensor

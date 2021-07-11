@@ -1,0 +1,65 @@
+2021-07-02 01:13:33,631 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:13:33,636 INFO werkzeug  * Restarting with stat
+2021-07-02 01:13:34,302 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:13:34,343 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:13:34,345 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:14:41,076 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:14:41,079 INFO werkzeug  * Restarting with stat
+2021-07-02 01:14:41,775 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:14:41,820 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:14:41,824 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:15:27,799 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:15:27,840 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:15:27,843 INFO werkzeug  * Restarting with stat
+2021-07-02 01:15:28,422 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:15:28,456 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:15:28,458 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:18:03,294 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:18:03,314 INFO werkzeug  * Restarting with stat
+2021-07-02 01:18:03,983 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:18:04,008 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:18:04,010 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:26:42,749 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:26:42,752 INFO werkzeug  * Restarting with stat
+2021-07-02 01:26:43,316 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:26:43,351 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:26:43,353 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:27:39,112 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:27:39,114 INFO werkzeug  * Restarting with stat
+2021-07-02 01:27:39,739 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:27:39,765 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:27:39,766 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:29:07,407 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:29:07,411 INFO werkzeug  * Restarting with stat
+2021-07-02 01:29:07,969 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:29:08,000 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:29:08,002 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:29:26,369 INFO werkzeug  * Detected change in '/home/pi/sample2/src/apps/rest-api/flask-rest-api/flaskapi.py', reloading
+2021-07-02 01:29:26,480 INFO werkzeug  * Restarting with stat
+2021-07-02 01:29:27,139 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:29:27,190 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:29:27,193 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:29:39,358 INFO werkzeug  * Detected change in '/home/pi/sample2/src/apps/rest-api/flask-rest-api/flaskapi.py', reloading
+2021-07-02 01:29:39,468 INFO werkzeug  * Restarting with stat
+2021-07-02 01:29:40,027 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:29:40,086 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:29:40,088 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:29:47,180 INFO werkzeug  * Detected change in '/home/pi/sample2/src/apps/rest-api/flask-rest-api/flaskapi.py', reloading
+2021-07-02 01:29:47,307 INFO werkzeug  * Restarting with stat
+2021-07-02 01:29:47,974 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:29:48,029 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:29:48,033 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:30:10,502 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:30:10,509 INFO werkzeug  * Restarting with stat
+2021-07-02 01:30:11,053 ERROR __main__ Failed to enable connection: Out of resources
+2021-07-02 01:30:11,079 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:30:11,080 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:30:46,664 INFO werkzeug  * Detected change in '/home/pi/sample2/src/apps/rest-api/flask-rest-api/flaskapi.py', reloading
+2021-07-02 01:33:08,105 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:33:08,111 INFO werkzeug  * Restarting with stat
+2021-07-02 01:33:09,362 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:33:09,364 INFO werkzeug  * Debugger PIN: 272-442-848
+2021-07-02 01:33:23,543 INFO werkzeug  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-07-02 01:33:23,547 INFO werkzeug  * Restarting with stat
+2021-07-02 01:33:24,741 WARNING werkzeug  * Debugger is active!
+2021-07-02 01:33:24,743 INFO werkzeug  * Debugger PIN: 272-442-848
