@@ -1,7 +1,7 @@
 {
     "pid": {
         "manual": 0.0,
-        "CV": 20.0,
+        "CV": 0.0,
         "kp": 15,
         "ki": 0.25,
         "kd": 0.02,
@@ -16,6 +16,9 @@
     "lamps": {
         "gpio_bcm_out": 13,
         "gpio_pwm_frequency": 100,
+        "lamps_hour_start": 8,
+        "lamps_hour_stop": 20,
+        "auto_mode": 0,
         "is_enabled": 1.0
     }
 }

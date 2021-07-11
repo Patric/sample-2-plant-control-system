@@ -8,6 +8,7 @@
 #  
 #  
 from time import sleep
+import datetime
 import sys
 sys.path.append("/home/pi/sample2/src/apps/rest-api/flask-rest-api/")
 from sensors import SoilSensor
@@ -130,12 +131,14 @@ try:
             logger.error(exc)
             
         try:
-            print(lamps.getState())
-            logger.info(f"Lamps state: {lamps.getState()}")
+            lamps_state = lamps.updateState(datetime.datetime.now().hour)
+            print(lamps_state)
+            logger.info(f"Lamps state: {lamps_state}, auto_mode: {lamps.getAutoMode()}")
         except Exception as exc:
             print(str(exc))
             logger.error(exc)
             
+       
         print(temps)
         sleep(2)
 except Exception as exception:

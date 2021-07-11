@@ -1,4 +1,6 @@
 from picamera import PiCamera
+import os
+
 
 class Camera:
     __i = 0
@@ -8,7 +10,9 @@ class Camera:
         self.__camera.start_preview()
         
     def savePhoto(self, location):
-        self.__camera.capture(f"{location}/photo{self.__i}.jpg")
+        if os.path.isfile(f"{location}/buffer{self.__i}.jpg"):
+            os.rename(f"{location}/buffer{self.__i}.jpg",f"{location}/photo{self.__i}.jpg")
+        self.__camera.capture(f"{location}/buffer{self.__i}.jpg")
         self.__i += 1
         if self.__i >= 0: self.__i = 0
 
