@@ -8,8 +8,12 @@
       "SP":27.7,
       "output_limit_min":0,
       "output_limit_max":100
-   },"gpio":{
-      "gpio_bcm_out":10,
+   },"heater":{
+      "gpio_bcm_out":12,
       "gpio_pwm_frequency":100
+   },"lamps":{
+      "gpio_bcm_out":13,
+      "gpio_pwm_frequency":100,
+      "is_enabled": 1
    }
 }

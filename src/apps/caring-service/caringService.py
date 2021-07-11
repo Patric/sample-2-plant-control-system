@@ -18,6 +18,7 @@ import json
 from statistics import mean
 from PID import PID
 from Camera import Camera
+from Lamps import Lamps
 
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
@@ -30,9 +31,9 @@ def checkIfFolderExists(folderName):
     if not CHECK_FOLDER:
         os.makedirs(folderName)
 
-LOGSDIR = '/home/pi/sample2/src/apps/www-data/logs'
-CONFIG_DIR = '/home/pi/sample2/src/apps/www-data/config/caring-service'
-PHOTO_DIR = '/home/pi/sample2/src/apps/www-data/images/photo'
+LOGSDIR = '/home/pi/sample2/src/apps/static/logs'
+CONFIG_DIR = '/home/pi/sample2/src/apps/static/config/caring-service'
+PHOTO_DIR = '/home/pi/sample2/src/apps/static/images/photo'
 
 
 checkIfFolderExists(LOGSDIR)
@@ -48,19 +49,41 @@ with open(f"{CONFIG_DIR}/config.json") as f:
         logger.error(" | loading default config |" + str(exc))
         with open(f"{CONFIG_DIR}/defaultConfig.json") as fdefault:
             config = json.load(fdefault)
-    
-automatic_control = PID()
-automatic_control.setConfig(config)
-logger.info("Loaded config" + json.dumps(config))
+
+try:
+    automatic_control = PID()
+    logger.info("Initiated PID controller." + json.dumps(config))
+    automatic_control.setConfig(config)
+    logger.info("Loaded config for PID" + json.dumps(config))
+except Exception as exc:
+    logger.error(exc)
+
+try:
+    camera = Camera()
+    logger.info("Initiated camera.")
+except Exception as exc:
+    logger.error(exc)
+
+try:
+    lamps = Lamps()
+    logger.info("Initiated lamps.")
+    lamps.setConfig(config)
+    logger.info("Loaded config for lamps" + json.dumps(config))
+except Exception as exc:
+    logger.error(exc)
+
 
 def on_config_modified(event):
     print(f"{event.src_path} has been modified")
     try:
-        with open('config.json') as f:
+        with open(f"{CONFIG_DIR}/config.json") as f:
             config = json.load(f)
  
         automatic_control.setConfig(config)
-        logger.info("Loaded config" + json.dumps(config))
+        logger.info("Loaded config for PID " + json.dumps(config))
+        
+        lamps.setConfig(config)
+        logger.info("Loaded config for lamps " + json.dumps(config))
     except Exception as exc:
         print(exc)
         logger.error(str(exc))
@@ -72,11 +95,7 @@ observer = Observer()
 observer.schedule(event_handler, CONFIG_DIR)
 observer.start()
 
-try:
-    camera = Camera()
-    logger.info("Initiated camera.")
-except Exception as exc:
-    logger.error(exc)
+
 
 print("Sample2 Caring Service started")
 try:
@@ -110,6 +129,13 @@ try:
             print(str(exc))
             logger.error(exc)
             
+        try:
+            print(lamps.getState())
+            logger.info(f"Lamps state: {lamps.getState()}")
+        except Exception as exc:
+            print(str(exc))
+            logger.error(exc)
+            
         print(temps)
         sleep(2)
 except Exception as exception:
@@ -120,3 +146,4 @@ finally:
     observer.stop()
     observer.join()
     camera.stopCapture()
+    lamps.stopLamps()

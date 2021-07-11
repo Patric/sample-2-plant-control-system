@@ -9,7 +9,7 @@ class PID:
     
     def setConfig(self, jsonConfig):
         jsonPID = jsonConfig['pid']
-        jsonGPIO = jsonConfig['gpio']
+        jsonHEATER = jsonConfig['heater']
         self.__manual = jsonPID['manual']
         self.__kp = jsonPID['kp']
         self.__ki = jsonPID['ki']
@@ -23,8 +23,8 @@ class PID:
         pid.output_limits = (self.__output_limit_min, self.__output_limit_max)
 
         if not self.__pwm:
-            self.__gpio_bcm_out = jsonGPIO['gpio_bcm_out']
-            self.__gpio_pwm_frequency = jsonGPIO['gpio_pwm_frequency']
+            self.__gpio_bcm_out = jsonHEATER['gpio_bcm_out']
+            self.__gpio_pwm_frequency = jsonHEATER['gpio_pwm_frequency']
             
             # Mode BCM, GPIO10
             GPIO.setmode(GPIO.BCM)

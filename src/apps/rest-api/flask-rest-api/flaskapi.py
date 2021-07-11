@@ -33,10 +33,10 @@ def turnOnLamps():
     finally:
         return jsonify({'lampsOn': output})
 
-@app.route('/controlConfig', methods=['GET'])
-def controlConfig():
+@app.route('/PIDConfig', methods=['GET'])
+def PIDConfig():
     try:
-        path = "/home/pi/sample2/src/apps/www-data/config/caring-service/config.json"
+        path = "/home/pi/sample2/src/apps/static/config/caring-service/config.json"
         with open(path) as f:
             config = json.load(f)
             
@@ -48,34 +48,69 @@ def controlConfig():
                     config ["pid"][key] = float(args.json[key])
 
             config = json.dumps(config, indent=4)
-          
+            
             with open(path, "w") as f:
                 f.write(config)
                 config = json.loads(config)
                 
-        output = config
+        output = config["pid"]
     except Exception as exception:
         output = "ERROR: " + str(exception)
     finally:
-        return jsonify({'controlConfig': output})
+        return jsonify({'PIDConfig': output})
+    
 
-@app.route('/getSample2ServiceLogs', methods=['GET'])
-def getSample2ServiceLogs():
+@app.route('/heaterConfig', methods=['GET'])
+def heaterConfig():
     try:
-        max_length_in_chars = 100000
-        max_length_arg = request.args.get('max_length', type = int)
-        if max_length_arg:
-            max_length_in_chars = max_length_arg
-
-        path = "/home/pi/sample2/src/apps/www-data/logs/caring_system.log"
+        path = "/home/pi/sample2/src/apps/static/config/caring-service/config.json"
         with open(path) as f:
-            content = f.read(max_length_in_chars).splitlines()
+            config = json.load(f)
+            
+        args = request.args
+        if args:
+            args = jsonify(args)
+            for key in args.json:
+                if key in config ["heater"]:
+                    config ["heater"][key] = float(args.json[key])
+
+            config = json.dumps(config, indent=4)
+            
+            with open(path, "w") as f:
+                f.write(config)
+                config = json.loads(config)
                 
-        output = content
+        output = config["heater"]
     except Exception as exception:
         output = "ERROR: " + str(exception)
     finally:
-        return output
+        return jsonify({'heaterConfig': output})
+    
+@app.route('/lampsConfig', methods=['GET'])
+def lampsConfig():
+    try:
+        path = "/home/pi/sample2/src/apps/static/config/caring-service/config.json"
+        with open(path) as f:
+            config = json.load(f)
+            
+        args = request.args
+        if args:
+            args = jsonify(args)
+            for key in args.json:
+                if key in config ["lamps"]:
+                    config ["lamps"][key] = float(args.json[key])
+
+            config = json.dumps(config, indent=4)
+            
+            with open(path, "w") as f:
+                f.write(config)
+                config = json.loads(config)
+                
+        output = config["lamps"]
+    except Exception as exception:
+        output = "ERROR: " + str(exception)
+    finally:
+        return jsonify({'lampsConfig': output})
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True)

@@ -1,16 +1,21 @@
 {
     "pid": {
         "manual": 0.0,
-        "CV": 3.0,
+        "CV": 20.0,
         "kp": 15,
         "ki": 0.25,
         "kd": 0.02,
-        "SP": 30.7,
+        "SP": 27.7,
         "output_limit_min": 0,
         "output_limit_max": 100
     },
-    "gpio": {
-        "gpio_bcm_out": 10,
+    "heater": {
+        "gpio_bcm_out": 12,
         "gpio_pwm_frequency": 100
+    },
+    "lamps": {
+        "gpio_bcm_out": 13,
+        "gpio_pwm_frequency": 100,
+        "is_enabled": 1.0
     }
 }

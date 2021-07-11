@@ -6,7 +6,7 @@ proxy_read_timeout 15m;
 proxy_connect_timeout 15m;
 proxy_send_timeout 15m;
 
-location /www-data { alias /home/pi/sample2/src/apps/www-data; }
+location /static { alias /home/pi/sample2/src/apps/static; }
 location / { try_files $uri @app; }
 location @app {
 include uwsgi_params;

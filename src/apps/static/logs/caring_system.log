@@ -1,0 +1,201 @@
+2021-07-11 16:52:23,176 INFO __main__ Initiated PID controller.{"pid": {"manual": 0.0, "CV": 20.0, "kp": 15, "ki": 0.25, "kd": 0.02, "SP": 27.7, "output_limit_min": 0, "output_limit_max": 100}, "heater": {"gpio_bcm_out": 12, "gpio_pwm_frequency": 100}, "lamps": {"gpio_bcm_out": 13, "gpio_pwm_frequency": 100, "is_enabled": 1.0}}
+2021-07-11 16:52:23,178 INFO __main__ Loaded config for PID{"pid": {"manual": 0.0, "CV": 20.0, "kp": 15, "ki": 0.25, "kd": 0.02, "SP": 27.7, "output_limit_min": 0, "output_limit_max": 100}, "heater": {"gpio_bcm_out": 12, "gpio_pwm_frequency": 100}, "lamps": {"gpio_bcm_out": 13, "gpio_pwm_frequency": 100, "is_enabled": 1.0}}
+2021-07-11 16:52:23,871 INFO __main__ Initiated camera.
+2021-07-11 16:52:23,872 INFO __main__ Initiated lamps.
+2021-07-11 16:52:23,873 ERROR __main__ 'NoneType' object has no attribute 'ChangeDutyCycle'
+2021-07-11 16:52:24,707 INFO __main__ [PV]: 29.52450876768 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.32137786554, 30.8146484375]
+2021-07-11 16:52:25,390 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:52:25,391 INFO __main__ Lamps state: 100
+2021-07-11 16:52:28,104 INFO __main__ [PV]: 29.545342101013333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.8146484375]
+2021-07-11 16:52:28,718 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:52:28,718 INFO __main__ Lamps state: 100
+2021-07-11 16:52:31,440 INFO __main__ [PV]: 29.49017651268 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.21838110054, 30.8146484375]
+2021-07-11 16:52:32,003 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:52:32,004 INFO __main__ Lamps state: 100
+2021-07-11 16:52:34,710 INFO __main__ [PV]: 29.488483804346668 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.21838110054, 30.8095703125]
+2021-07-11 16:52:35,279 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:52:35,280 INFO __main__ Lamps state: 100
+2021-07-11 16:52:37,980 INFO __main__ [PV]: 29.535120746846665 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.783984375]
+2021-07-11 16:52:38,564 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:52:38,564 INFO __main__ Lamps state: 100
+2021-07-11 16:52:41,270 INFO __main__ [PV]: 29.531735330180002 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.773828125]
+2021-07-11 16:52:41,845 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:52:41,845 INFO __main__ Lamps state: 100
+2021-07-11 16:53:01,233 INFO __main__ [PV]: 29.51943064268 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.32137786554, 30.7994140625]
+2021-07-11 16:53:01,710 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:01,710 INFO __main__ Lamps state: 100
+2021-07-11 16:53:04,394 INFO __main__ [PV]: 29.583129963106668 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.825]
+2021-07-11 16:53:04,882 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:04,882 INFO __main__ Lamps state: 100
+2021-07-11 16:53:07,584 INFO __main__ [PV]: 29.6123240752 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.5274019131, 30.8095703125]
+2021-07-11 16:53:08,161 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:08,162 INFO __main__ Lamps state: 100
+2021-07-11 16:53:10,874 INFO __main__ [PV]: 29.50423901268 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.7943359375]
+2021-07-11 16:53:11,450 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:11,451 INFO __main__ Lamps state: 100
+2021-07-11 16:53:14,149 INFO __main__ [PV]: 29.533428038513332 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.77890625]
+2021-07-11 16:53:14,671 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:14,672 INFO __main__ Lamps state: 100
+2021-07-11 16:53:17,354 INFO __main__ [PV]: 29.526592101013332 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.7583984375]
+2021-07-11 16:53:17,833 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:17,834 INFO __main__ Lamps state: 100
+2021-07-11 16:53:20,533 INFO __main__ [PV]: 29.388794128846666 [CV]: 0, [SP]: 27.7 
+ [27.5, 29.90290582404, 30.7634765625]
+2021-07-11 16:53:21,079 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:21,079 INFO __main__ Lamps state: 100
+2021-07-11 16:53:23,764 INFO __main__ [PV]: 29.524899392680002 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.7533203125]
+2021-07-11 16:53:24,270 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:24,270 INFO __main__ Lamps state: 100
+2021-07-11 16:53:26,966 INFO __main__ [PV]: 29.528284809346665 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.7634765625]
+2021-07-11 16:53:27,503 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:27,504 INFO __main__ Lamps state: 100
+2021-07-11 16:53:30,176 INFO __main__ [PV]: 29.591881366866666 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.5274019131, 30.7482421875]
+2021-07-11 16:53:30,659 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:30,659 INFO __main__ Lamps state: 100
+2021-07-11 16:53:33,337 INFO __main__ [PV]: 29.555851317273333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.7431640625]
+2021-07-11 16:53:33,864 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:33,865 INFO __main__ Lamps state: 100
+2021-07-11 16:53:36,576 INFO __main__ [PV]: 29.591713499793332 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.63041393688, 30.7072265625]
+2021-07-11 16:53:37,151 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:37,151 INFO __main__ Lamps state: 100
+2021-07-11 16:53:39,865 INFO __main__ [PV]: 29.492151996846665 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.32137786554, 30.717578125]
+2021-07-11 16:53:40,467 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:40,468 INFO __main__ Lamps state: 100
+2021-07-11 16:53:43,186 INFO __main__ [PV]: 29.392690165533335 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.1089298716, 30.569140625]
+2021-07-11 16:53:43,761 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:43,762 INFO __main__ Lamps state: 100
+2021-07-11 16:53:46,463 INFO __main__ [PV]: 29.549015379773333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.72265625]
+2021-07-11 16:53:47,016 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:47,017 INFO __main__ Lamps state: 100
+2021-07-11 16:53:49,725 INFO __main__ [PV]: 29.473509846013332 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.7021484375]
+2021-07-11 16:53:50,337 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:50,338 INFO __main__ Lamps state: 100
+2021-07-11 16:53:53,010 INFO __main__ [PV]: 29.489265054346667 [CV]: 0, [SP]: 27.7 
+ [27.5625, 30.21838110054, 30.6869140625]
+2021-07-11 16:53:53,489 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:53,490 INFO __main__ Lamps state: 100
+2021-07-11 16:53:56,198 INFO __main__ [PV]: 29.52857267144 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.661328125]
+2021-07-11 16:53:56,769 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:53:56,770 INFO __main__ Lamps state: 100
+2021-07-11 16:53:59,475 INFO __main__ [PV]: 29.55109871310667 [CV]: 0, [SP]: 27.7 
+ [27.5625, 30.42438988932, 30.66640625]
+2021-07-11 16:54:00,024 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:00,025 INFO __main__ Lamps state: 100
+2021-07-11 16:54:02,747 INFO __main__ [PV]: 29.466673908513332 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.681640625]
+2021-07-11 16:54:03,330 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:03,331 INFO __main__ Lamps state: 100
+2021-07-11 16:54:06,033 INFO __main__ [PV]: 29.430190165533332 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.1089298716, 30.681640625]
+2021-07-11 16:54:06,588 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:06,589 INFO __main__ Lamps state: 100
+2021-07-11 16:54:09,288 INFO __main__ [PV]: 29.566295429366665 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.5274019131, 30.671484375]
+2021-07-11 16:54:09,831 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:09,831 INFO __main__ Lamps state: 100
+2021-07-11 16:54:12,512 INFO __main__ [PV]: 29.45990307518 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.661328125]
+2021-07-11 16:54:12,993 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:12,993 INFO __main__ Lamps state: 100
+2021-07-11 16:54:15,686 INFO __main__ [PV]: 29.531958088106666 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.671484375]
+2021-07-11 16:54:16,202 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:16,202 INFO __main__ Lamps state: 100
+2021-07-11 16:54:18,895 INFO __main__ [PV]: 29.5629100127 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.5274019131, 30.661328125]
+2021-07-11 16:54:19,450 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:19,451 INFO __main__ Lamps state: 100
+2021-07-11 16:54:22,151 INFO __main__ [PV]: 29.4234193322 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.1089298716, 30.661328125]
+2021-07-11 16:54:22,676 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:22,677 INFO __main__ Lamps state: 100
+2021-07-11 16:54:25,372 INFO __main__ [PV]: 29.52681485894 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.6560546875]
+2021-07-11 16:54:25,918 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:25,918 INFO __main__ Lamps state: 100
+2021-07-11 16:54:28,635 INFO __main__ [PV]: 29.574656208126665 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.63041393688, 30.6560546875]
+2021-07-11 16:54:29,199 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:29,200 INFO __main__ Lamps state: 100
+2021-07-11 16:54:31,881 INFO __main__ [PV]: 29.48739939268 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.6408203125]
+2021-07-11 16:54:32,378 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:32,378 INFO __main__ Lamps state: 100
+2021-07-11 16:54:35,078 INFO __main__ [PV]: 29.451374429346668 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.6357421875]
+2021-07-11 16:54:35,629 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:35,630 INFO __main__ Lamps state: 100
+2021-07-11 16:54:38,333 INFO __main__ [PV]: 29.580190062293333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.63041393688, 30.61015625]
+2021-07-11 16:54:38,856 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:38,856 INFO __main__ Lamps state: 100
+2021-07-11 16:54:41,546 INFO __main__ [PV]: 29.416908915533334 [CV]: 0, [SP]: 27.7 
+ [27.5625, 30.1089298716, 30.579296875]
+2021-07-11 16:54:42,089 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:42,090 INFO __main__ Lamps state: 100
+2021-07-11 16:54:44,788 INFO __main__ [PV]: 29.480395588106667 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.42438988932, 30.579296875]
+2021-07-11 16:54:45,335 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:45,336 INFO __main__ Lamps state: 100
+2021-07-11 16:54:48,043 INFO __main__ [PV]: 29.437702554346668 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.5947265625]
+2021-07-11 16:54:48,645 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:48,646 INFO __main__ Lamps state: 100
+2021-07-11 16:54:51,339 INFO __main__ [PV]: 29.509757567273333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.6048828125]
+2021-07-11 16:54:51,885 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:51,885 INFO __main__ Lamps state: 100
+2021-07-11 16:54:54,567 INFO __main__ [PV]: 29.573354124793333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.63041393688, 30.5896484375]
+2021-07-11 16:54:55,131 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:55,131 INFO __main__ Lamps state: 100
+2021-07-11 16:54:57,844 INFO __main__ [PV]: 29.58685813272 [CV]: 0, [SP]: 27.7 
+ [27.4375, 30.73342596066, 30.5896484375]
+2021-07-11 16:54:58,421 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:54:58,422 INFO __main__ Lamps state: 100
+2021-07-11 16:55:01,111 INFO __main__ [PV]: 29.499536213106666 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.42438988932, 30.57421875]
+2021-07-11 16:55:01,606 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:55:01,607 INFO __main__ Lamps state: 100
+2021-07-11 16:55:04,285 INFO __main__ [PV]: 29.559682249793333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.63041393688, 30.5486328125]
+2021-07-11 16:55:04,769 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:55:04,769 INFO __main__ Lamps state: 100
+2021-07-11 16:55:07,473 INFO __main__ [PV]: 29.449834288513333 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.32137786554, 30.528125]
+2021-07-11 16:55:08,019 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:55:08,019 INFO __main__ Lamps state: 100
+2021-07-11 16:55:10,702 INFO __main__ [PV]: 29.389304748866667 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.1089298716, 30.558984375]
+2021-07-11 16:55:11,180 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:55:11,181 INFO __main__ Lamps state: 100
+2021-07-11 16:55:13,877 INFO __main__ [PV]: 29.380776103033334 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.1089298716, 30.5333984375]
+2021-07-11 16:55:14,370 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:55:14,370 INFO __main__ Lamps state: 100
+2021-07-11 16:55:17,064 INFO __main__ [PV]: 29.43255932518 [CV]: 0, [SP]: 27.7 
+ [27.5, 30.21838110054, 30.579296875]
+2021-07-11 16:55:17,528 INFO __main__ Successfully saved photo to /home/pi/sample2/src/apps/static/images/photo
+2021-07-11 16:55:17,528 INFO __main__ Lamps state: 100
